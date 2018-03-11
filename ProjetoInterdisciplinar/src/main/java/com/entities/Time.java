@@ -22,6 +22,9 @@ public class Time {
 	@Column(name="logo_time")
 	private String logo;
 	
+	@Column(name="excluido")
+	private int excluido;
+	
 	public int getid() {
 		return id;
 	}
@@ -39,5 +42,11 @@ public class Time {
 	}
 	public void setlogo(String logo) {
 		this.logo = logo;
+	}
+	public String getexcluido() {
+		return logo;
+	}
+	public void setexcluido(int excluido) {
+		this.excluido = excluido;
 	}	
 }

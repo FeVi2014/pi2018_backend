@@ -33,10 +33,10 @@ public class TimeController {
 		
 		if(service.saveOrUpdate(time)) {
 			map.put("status", "200");
-			map.put("message", "Time salvo com sucesso");		
+			map.put("message", "Time salvo com sucesso!");		
 		} else {
-			map.put("status", "404");
-			map.put("message", "Time não pode ser salvo");
+			map.put("status", "500");
+			map.put("message", "Time não pode ser salvo!");
 		}
 		return map;
 	}
@@ -49,11 +49,11 @@ public class TimeController {
 		
 		if(lista != null) {
 			map.put("status", "200");
-			map.put("message", "Times encontrados");
+			map.put("message", "Times encontrados!");
 			map.put("data", lista);
 		} else {
 			map.put("status", "404");
-			map.put("message", "Nenhum time encotrado");
+			map.put("message", "Nenhum time encotrado!");
 		}
 		return map;
 	}
@@ -64,10 +64,10 @@ public class TimeController {
 		
 		if(service.delete(time)) {
 			map.put("status", "200");
-			map.put("message", "Time excluido com sucesso");		
+			map.put("message", "Time excluido com sucesso!");		
 		} else {
-			map.put("status", "404");
-			map.put("message", "Time excluido com sucesso");	
+			map.put("status", "500");
+			map.put("message", "Time não pode ser excluido!");	
 		}
 		return map;
 	}

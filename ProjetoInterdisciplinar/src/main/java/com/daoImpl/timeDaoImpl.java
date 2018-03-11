@@ -19,11 +19,12 @@ public class timeDaoImpl implements timeDao{
 	
 	@SuppressWarnings("unchecked")
 	public List<Time> list() {
-		return session.getCurrentSession().createQuery("from Time").list();		
+		return session.getCurrentSession().createQuery("from Time where excluido = 0").list();		
 	}
 	public boolean delete(Time time) {
 		try {
-			session.getCurrentSession().delete(time);
+			time.setexcluido(1);
+			session.getCurrentSession().saveOrUpdate(time);
 		}catch(Exception ex) {
 			return false;
 		}

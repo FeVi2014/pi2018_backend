@@ -1,0 +1,29 @@
+
+/**SQL QUERY**/
+
+
+CREATE TABLE `time` (
+
+  	`id_time` int(11) NOT NULL AUTO_INCREMENT,
+  
+	`nome_time` varchar(200) NOT NULL,
+ 
+ 	`logo_time` varchar(200) DEFAULT NULL,
+ 
+ 	`excluido` int(1) DEFAULT '0',
+  
+PRIMARY KEY (`id_time`)
+) ENGINE=InnoDB AUTO_INCREMENT=35 DEFAULT CHARSET=latin1
+
+
+/**CONEXÃO**/
+
+database = PI
+user = root
+senha = 1234
+schema = pi2018
+
+
+/**TUDO QUE ESTA AI TEM Q SER FEITO IGUAL PARA FUNCIONAR!**/
+
+ps.: ou mude as configurações do projeto.
